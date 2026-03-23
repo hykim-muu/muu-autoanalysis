@@ -1,8 +1,8 @@
-# Blueprint: Stuttgart Football Agency
+# Blueprint: Stazit Football Agency
 
 ## Overview
 
-This project is the official website for the Stuttgart Football Agency, a premier agency dedicated to nurturing football talent and building successful careers. The website serves as a digital brochure, providing information about the agency, its services, and its players.
+This project is the official website for the Stazit Football Agency, a premier agency dedicated to nurturing football talent and building successful careers. The website serves as a digital brochure, providing information about the agency, its services, and its players.
 
 ## Project Outline
 
@@ -26,10 +26,10 @@ This project is the official website for the Stuttgart Football Agency, a premie
 
 ## Current Plan
 
-**Objective:** Relaunch the website with a new identity as the "Stuttgart Football Agency."
+**Objective:** Relaunch the website with a new identity as the "Stazit Football Agency."
 
 **Steps:**
-1.  **Update `index.html`:** The HTML has been completely rewritten to reflect the new content and structure of the Stuttgart Football Agency website.
+1.  **Update `index.html`:** The HTML has been completely rewritten to reflect the new content and structure of the Stazit Football Agency website.
 2.  **Update `style.css`:** The CSS has been completely rewritten to match the new dark, modern, and professional design, with a bold orange accent.
 3.  **Update `main.js`:** The JavaScript has been cleared of any previous functionality and now only contains a console log to indicate that the site has loaded.
 4.  **Update `blueprint.md`:** This blueprint has been updated to reflect the new project identity and the changes made to the files.

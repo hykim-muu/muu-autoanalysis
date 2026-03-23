@@ -1,4 +1,4 @@
-// Stuttgart Football Agency - main.js
+// Stazit Football Agency - main.js
 
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('theme-toggle');
@@ -23,5 +23,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    console.log("Stuttgart Football Agency website loaded with Dark Mode support.");
+    console.log("Stazit Football Agency website loaded with Dark Mode support.");
 });
