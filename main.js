@@ -69,10 +69,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function drawHeatmap() {
-        const ctx = canvas.getContext('2d');
         const container = canvas.parentElement;
-        const w = canvas.width = container.offsetWidth;
-        const h = canvas.height = container.offsetHeight;
+        if (!container) return;
+        
+        // Ensure the canvas matches its display size
+        canvas.width = container.clientWidth;
+        canvas.height = container.clientHeight;
+        
+        const ctx = canvas.getContext('2d');
+        const w = canvas.width;
+        const h = canvas.height;
 
         ctx.clearRect(0, 0, w, h);
 
