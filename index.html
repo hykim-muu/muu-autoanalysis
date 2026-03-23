@@ -1,14 +1,84 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuttgart Football Agency</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <h1>Stuttgart Football Agency</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#players">Players</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Your Future in Football Starts Here</h2>
+                <p>We are a premier football agency dedicated to nurturing talent and building successful careers.</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Stuttgart Football Agency is a leading name in the world of football representation. With a team of experienced agents and a global network, we provide our clients with unparalleled opportunities and support.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Player Representation</li>
+                <li>Contract Negotiation</li>
+                <li>Career Management</li>
+                <li>Sponsorship & Endorsements</li>
+            </ul>
+        </section>
+
+        <section id="players">
+            <h2>Our Players</h2>
+            <div class="player-gallery">
+                <div class="player-card">
+                    <img src="https://via.placeholder.com/150" alt="Player 1">
+                    <h3>Player Name</h3>
+                    <p>Position</p>
+                </div>
+                <div class="player-card">
+                    <img src="https://via.placeholder.com/150" alt="Player 2">
+                    <h3>Player Name</h3>
+                    <p>Position</p>
+                </div>
+                <div class="player-card">
+                    <img src="https://via.placeholder.com/150" alt="Player 3">
+                    <h3>Player Name</h3>
+                    <p>Position</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Stuttgart Football Agency. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 </html>
