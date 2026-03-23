@@ -39,26 +39,48 @@ document.addEventListener('DOMContentLoaded', () => {
         resultDiv.classList.add('hidden');
         statusDiv.classList.remove('hidden');
 
-        // Simulate AI Analysis Time (3 seconds)
+        // Simulate AI Analysis Time (3.5 seconds)
         setTimeout(() => {
             statusDiv.classList.add('hidden');
             resultDiv.classList.remove('hidden');
             drawHeatmap();
-        }, 3000);
+            
+            // Auto-scroll to result
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }, 3500);
+    });
+
+    // Tab Switching Logic
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.dataset.tab;
+
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.add('hidden'));
+
+            btn.classList.add('active');
+            document.getElementById(`${target}-tab`).classList.remove('hidden');
+
+            if (target === 'heatmap') drawHeatmap();
+        });
     });
 
     function drawHeatmap() {
         const ctx = canvas.getContext('2d');
-        const w = canvas.width = canvas.offsetWidth;
-        const h = canvas.height = canvas.offsetHeight;
+        const container = canvas.parentElement;
+        const w = canvas.width = container.offsetWidth;
+        const h = canvas.height = container.offsetHeight;
 
         ctx.clearRect(0, 0, w, h);
 
         // Simple Random Heatmap Simulation
-        for(let i = 0; i < 50; i++) {
+        for(let i = 0; i < 60; i++) {
             const x = Math.random() * w;
             const y = Math.random() * h;
-            const radius = 20 + Math.random() * 40;
+            const radius = 30 + Math.random() * 50;
             
             const gradient = ctx.createRadialGradient(x, y, 0, x, y, radius);
             gradient.addColorStop(0, 'rgba(255, 165, 0, 0.4)');
@@ -71,5 +93,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    console.log("Stazit Football Agency website loaded with AI Heatmap Prototype.");
+    console.log("Stazit Football Agency website loaded with AI Highlights & Heatmap.");
 });
