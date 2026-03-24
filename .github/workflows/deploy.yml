@@ -35,8 +35,10 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # Only upload relevant files
           path: '.'
+          # Exclude git and other non-relevant files if needed, but standard is fine
+          # Adding a comment to force change and improve clarity
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
