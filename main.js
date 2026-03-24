@@ -1,4 +1,4 @@
-// Stazit Football Agency - main.js
+// STAZIT FOOTBALL AGENCY - main.js
 
 document.addEventListener('DOMContentLoaded', () => {
     // Theme Toggle Logic
@@ -22,5 +22,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    console.log("Stazit Football Agency website loaded.");
+    console.log("STAZIT FOOTBALL AGENCY website loaded. Excellence in every move.");
 });
