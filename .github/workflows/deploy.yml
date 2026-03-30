@@ -35,10 +35,9 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Only upload relevant files
+          # Uploading entire repository including stazit-ai-analysis subfolder
           path: '.'
-          # Exclude git and other non-relevant files if needed, but standard is fine
-          # Adding a comment to force change and improve clarity
+          # Ensuring all files are properly included for deployment
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
