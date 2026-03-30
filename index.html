@@ -1,86 +1,131 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Football AI Dev Studio</title>
+    <title>STAZIT FOOTBALL AGENCY | 엘리트 축구 에이전시</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <div class="logo">⚽ AI Analysis Studio</div>
-        <p>Hybrid Dev Environment (YouTube + Local Analysis)</p>
+        <h1>STAZIT FOOTBALL</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">에이전시 철학</a></li>
+                <li><a href="#services">주요 서비스</a></li>
+                <li><a href="#players">소속 선수</a></li>
+                <li><a href="#contact">문의하기</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle">다크 모드</button>
     </header>
 
-    <main class="container">
-        <section class="video-section">
-            <!-- Source Selector -->
-            <div class="source-selector">
-                <button id="mode-yt" class="tab-btn active">YouTube Mode (Legal)</button>
-                <button id="mode-local" class="tab-btn">Local Dev Mode (AI Testing)</button>
-            </div>
-
-            <!-- YouTube Input -->
-            <div id="yt-input-area" class="input-group">
-                <input type="text" id="youtube-url" placeholder="Paste YouTube Link">
-                <button id="load-yt-btn" class="primary-btn">Load YouTube</button>
-            </div>
-
-            <!-- Local File Input (Hidden by default) -->
-            <div id="local-input-area" class="input-group" style="display: none;">
-                <input type="file" id="local-file" accept="video/*">
-                <p><small>Use local files to test real frame-by-frame AI analysis.</small></p>
-            </div>
-            
-            <div class="video-container">
-                <!-- YouTube Player -->
-                <div id="player"></div>
-                <!-- Local Video Player (HTML5) -->
-                <video id="local-video" style="display: none;" controls></video>
-                
-                <!-- AI Overlay Canvas (This is where we draw tracking boxes) -->
-                <canvas id="ai-canvas"></canvas>
-            </div>
-            
-            <div class="controls-card">
-                <div class="player-select">
-                    <input type="text" id="target-player" placeholder="Player Name to Track">
-                    <button id="scan-btn" class="secondary-btn">🔍 Run AI Tracking</button>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>축구의 미래를 정의하다</h2>
+                <p>STAZIT FOOTBALL AGENCY는 엘리트 축구 선수들을 위해 세계적인 수준의 매니지먼트, 전략적 커리어 플래닝, 그리고 독보적인 글로벌 네트워크를 제공합니다.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="cta-button">지금 합류하세요</a>
                 </div>
             </div>
         </section>
 
-        <aside class="analysis-panel">
-            <h2>Tracking Results</h2>
-            <div id="analysis-status" class="status-box">Select a source to begin.</div>
-            <div id="highlight-list" class="highlight-list"></div>
-        </aside>
+        <section id="about">
+            <h2>에이전시 철학</h2>
+            <p>STAZIT은 단순한 커리어 관리를 넘어 선수의 위대한 유산을 만듭니다. 우리는 정밀한 데이터 분석과 개인별 맞춤 멘토링을 결합하여, 소속 선수들이 경기장 안팎에서 자신의 잠재력을 100% 발휘할 수 있도록 전폭적으로 지원합니다.</p>
+        </section>
+
+        <section id="services">
+            <h2>전문 서비스</h2>
+            <div class="player-gallery">
+                <div class="player-card">
+                    <div class="player-info">
+                        <h3>전략적 매니지먼트</h3>
+                        <p>정직과 비전을 바탕으로 현대 축구의 복잡한 비즈니스 환경에서 선수를 완벽하게 보호하고 가이드합니다.</p>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-info">
+                        <h3>계약 협상의 마스터</h3>
+                        <p>전문적인 협상력을 통해 선수의 가치를 증명하고, 최고의 계약 조건을 확보하는 데 집중합니다.</p>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <div class="player-info">
+                        <h3>글로벌 퍼스널 브랜딩</h3>
+                        <p>대륙을 아우르는 강력한 개인 브랜드를 구축하여 선수의 시장 가치와 영향력을 극대화합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="players">
+            <h2>주요 선수 명단</h2>
+            <div class="player-gallery">
+                <div class="player-card">
+                    <img src="https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=800&q=80" alt="Legendary Forward">
+                    <div class="player-info">
+                        <h3>월드클래스 포워드</h3>
+                        <p>유럽 대항전 득점왕</p>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80" alt="Midfielder">
+                    <div class="player-info">
+                        <h3>창의적인 미드필더</h3>
+                        <p>라리가 소속</p>
+                    </div>
+                </div>
+                <div class="player-card">
+                    <img src="https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=800&q=80" alt="Defender">
+                    <div class="player-info">
+                        <h3>철벽의 수비수</h3>
+                        <p>분데스리가 소속</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>상담 문의</h2>
+            <p>프로페셔널한 커리어의 도약을 원하시나요? STAZIT과 함께 당신의 미래를 설계해 보세요.</p>
+            <form action="https://formspree.io/f/xjgaqjkw" method="POST">
+                <input type="text" name="name" placeholder="성함" required>
+                <input type="email" name="email" placeholder="이메일 주소" required>
+                <textarea name="message" placeholder="현재 소속팀 및 커리어 목표에 대해 말씀해 주세요..." required rows="5"></textarea>
+                <button type="submit">지원서 제출하기</button>
+            </form>
+        </section>
+
+        <section id="comments" style="max-width: 800px; margin: 4rem auto; padding: 0 2rem;">
+            <h2>커뮤니티 댓글</h2>
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://hytree-hylight-reel.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </section>
     </main>
 
-    <div class="container" style="display: block; margin-top: 3rem; border-top: 1px solid #334155; padding-top: 2rem;">
-        <h3>Community Comments</h3>
-        <div id="disqus_thread"></div>
-        <script>
-            /**
-            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-            /*
-            var disqus_config = function () {
-            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-            };
-            */
-            (function() { // DON'T EDIT BELOW THIS LINE
-            var d = document, s = d.createElement('script');
-            s.src = 'https://hytree-hylight-reel.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
+    <footer>
+        <p>&copy; 2024 STAZIT FOOTBALL AGENCY. 대한민국 축구 에이전시의 새로운 기준.</p>
+    </footer>
 
-    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="main.js"></script>
 </body>
 </html>
