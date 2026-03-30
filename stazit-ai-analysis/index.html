@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAZIT AI | 축구 영상 자동 분석 플랫폼</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="nav-container">
+            <div class="logo">STAZIT <span>AI</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#analyzer">AI 분석기</a></li>
+                    <li><a href="#features">기술 소개</a></li>
+                    <li><a href="#inquiry">솔루션 문의</a></li>
+                    <li><a href="#comments">커뮤니티</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <h1>데이터로 증명하는 <span>선수의 가치</span></h1>
+            <p>AI 기반 자동 영상 분석으로 하이라이트 추출부터 퍼포먼스 데이터까지 한 번에 해결하세요.</p>
+        </section>
+
+        <!-- AI Analyzer Section -->
+        <section id="analyzer" class="container">
+            <div class="analyzer-wrapper">
+                <div class="video-panel">
+                    <div class="source-tabs">
+                        <button id="tab-yt" class="active"><i class="fab fa-youtube"></i> 유튜브 링크</button>
+                        <button id="tab-local"><i class="fas fa-file-video"></i> 로컬 파일</button>
+                    </div>
+                    
+                    <div class="input-group" id="yt-input">
+                        <input type="text" id="yt-url" placeholder="유튜브 영상 주소를 입력하세요 (예: https://youtube.com/...)">
+                        <button id="btn-load-yt">영상 불러오기</button>
+                    </div>
+
+                    <div class="input-group" id="local-input" style="display: none;">
+                        <input type="file" id="video-file" accept="video/*">
+                    </div>
+
+                    <div class="screen-container">
+                        <div id="player"></div>
+                        <video id="local-video" style="display: none;" controls></video>
+                        <canvas id="analysis-overlay"></canvas>
+                        <div id="status-overlay">분석 대기 중...</div>
+                    </div>
+
+                    <div class="analyzer-controls">
+                        <input type="text" id="target-name" placeholder="추적할 선수 이름/번호">
+                        <button id="btn-analyze" class="pulse-btn">AI 분석 시작</button>
+                    </div>
+                </div>
+
+                <div class="data-panel">
+                    <h3><i class="fas fa-chart-line"></i> 실시간 분석 리포트</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="label">활동량</span>
+                            <span class="value" id="stat-distance">0.0km</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="label">최고 속도</span>
+                            <span class="value" id="stat-speed">0.0km/h</span>
+                        </div>
+                    </div>
+                    <div class="event-timeline">
+                        <h4>주요 이벤트 타임라인</h4>
+                        <div id="event-list" class="list-empty">영상을 분석하면 하이라이트가 생성됩니다.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Inquiry Section -->
+        <section id="inquiry" class="container">
+            <div class="section-header">
+                <h2>솔루션 도입 문의</h2>
+                <p>구단, 에이전시, 개인 선수를 위한 맞춤형 AI 분석 솔루션을 제공합니다.</p>
+            </div>
+            <div class="contact-card">
+                <form action="https://formspree.io/f/xjgaqjkw" method="POST">
+                    <div class="form-row">
+                        <input type="text" name="name" placeholder="성함/기관명" required>
+                        <input type="email" name="email" placeholder="이메일 주소" required>
+                    </div>
+                    <select name="type">
+                        <option value="agency">에이전시 서비스 문의</option>
+                        <option value="club">구단 도입 문의</option>
+                        <option value="player">개인 분석 의뢰</option>
+                    </select>
+                    <textarea name="message" placeholder="문의 내용을 상세히 적어주세요..." rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">문의하기 제출</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Comments Section -->
+        <section id="comments" class="container">
+            <div class="section-header">
+                <h2>커뮤니티 및 피드백</h2>
+            </div>
+            <div id="disqus_thread"></div>
+            <script>
+                var disqus_config = function () {
+                    this.page.url = window.location.href;
+                    this.page.identifier = 'stazit-ai-analysis';
+                };
+                (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://hytree-hylight-reel.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 STAZIT AI Lab. Powered by Next-Gen Computer Vision.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="main.js"></script>
+</body>
+</html>
